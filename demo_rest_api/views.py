@@ -64,6 +64,7 @@ class DemoRestApiItem(APIView):
 
         return Response({'message': 'Recurso reemplazado correctamente.', 'data': new_item}, status=status.HTTP_200_OK)
 
+
     def patch(self, request, item_id, format=None):
         item = self.get_item(item_id)
         if item is None:
